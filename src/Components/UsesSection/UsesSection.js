@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { ScrollTrigger } from "gsap-trial/ScrollTrigger";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import {
@@ -20,34 +19,22 @@ function UsesSection() {
   const container = useRef();
   useGSAP(
     () => {
-      gsap.to(".card-1", {
-        y: -150,
-        scrollTrigger: {
-          trigger: ".card-1",
-          start: `bottom 150%`,
-          end: "top 50%",
-          scrub: true,
-          markers: true,
-        },
-      });
       gsap.to(".card-2", {
-        y: -300,
+        y: -250,
         scrollTrigger: {
           trigger: ".card-2",
-          start: `bottom 150%`,
-          end: "top 50%",
+          start: `top 80%`,
+          end: "top 60%",
           scrub: true,
-          markers: true,
         },
       });
       gsap.to(".card-3", {
-        y: -600,
+        y: -250,
         scrollTrigger: {
-          trigger: ".card-2",
-          start: `bottom 150%`,
-          end: "top 50%",
+          trigger: ".card-3",
+          start: `top 80%`,
+          end: "top 60%",
           scrub: true,
-          markers: true,
         },
       });
     },

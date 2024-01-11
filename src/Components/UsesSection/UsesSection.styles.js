@@ -24,7 +24,6 @@ export const Card = styled.div`
   padding: 10rem 0 16rem;
   width: 100%;
   position: relative;
-  /* top: 10rem; */
   background-color: #37384c;
   border-radius: 5rem;
   z-index: 1;
@@ -62,20 +61,17 @@ export const Card = styled.div`
   }
 
   &:nth-child(2) {
-    /* margin-top: -10rem; */
-    /* top: 15rem; */
+    top: -5rem;
     background-color: #414256;
     z-index: 2;
   }
   &:nth-child(3) {
-    /* margin-top: -10rem; */
-    top: -15rem;
+    top: -10rem;
     background-color: #4b4c60;
     z-index: 2;
   }
   &:nth-child(4) {
-    /* margin-top: -25rem; */
-    top: -15rem;
+    top: -39rem;
     background-color: #55566a;
     position: relative;
     z-index: 2;

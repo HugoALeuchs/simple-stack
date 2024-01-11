@@ -31,7 +31,7 @@ function App() {
         <div id="smooth-content">
           <SpecificationSection padding="10rem 0 0" />
           <UsesSection />
-          <SpecificationSection padding="25rem 0 0" />
+          <SpecificationSection padding="50rem 0 0" />
         </div>
       </div>
     </div>
