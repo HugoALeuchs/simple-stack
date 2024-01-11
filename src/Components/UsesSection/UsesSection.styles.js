@@ -7,10 +7,13 @@ export const UsesWrapper = styled.section`
   align-items: center;
   justify-content: flex-start;
   border-radius: 5rem;
+  position: relative;
+  height: 100vh;
 `;
 
 export const Stack = styled.div`
   width: 100%;
+  height: 100vh;
 `;
 
 export const Card = styled.div`
@@ -20,9 +23,8 @@ export const Card = styled.div`
   justify-content: space-around;
   padding: 10rem 0 16rem;
   width: 100%;
-  position: sticky;
-  margin-top: -10rem;
-  top: 10rem;
+  position: relative;
+  /* top: 10rem; */
   background-color: #37384c;
   border-radius: 5rem;
   z-index: 1;
@@ -60,20 +62,20 @@ export const Card = styled.div`
   }
 
   &:nth-child(2) {
-    margin-top: -10rem;
-    top: 5rem;
+    /* margin-top: -10rem; */
+    /* top: 15rem; */
     background-color: #414256;
     z-index: 2;
   }
   &:nth-child(3) {
-    margin-top: -10rem;
-    top: 25rem;
+    /* margin-top: -10rem; */
+    top: -15rem;
     background-color: #4b4c60;
     z-index: 2;
   }
   &:nth-child(4) {
-    margin-top: -25rem;
-    top: 20rem;
+    /* margin-top: -25rem; */
+    top: -15rem;
     background-color: #55566a;
     position: relative;
     z-index: 2;

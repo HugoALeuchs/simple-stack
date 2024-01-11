@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
+import { ScrollTrigger } from "gsap-trial/ScrollTrigger";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import {
   UsesWrapper,
   Stack,
@@ -14,16 +17,53 @@ const image2 = "./use-2-xl.webp";
 const image3 = "./use-3-xl.webp";
 
 function UsesSection() {
+  const container = useRef();
+  useGSAP(
+    () => {
+      gsap.to(".card-1", {
+        y: -150,
+        scrollTrigger: {
+          trigger: ".card-1",
+          start: `bottom 150%`,
+          end: "top 50%",
+          scrub: true,
+          markers: true,
+        },
+      });
+      gsap.to(".card-2", {
+        y: -300,
+        scrollTrigger: {
+          trigger: ".card-2",
+          start: `bottom 150%`,
+          end: "top 50%",
+          scrub: true,
+          markers: true,
+        },
+      });
+      gsap.to(".card-3", {
+        y: -600,
+        scrollTrigger: {
+          trigger: ".card-2",
+          start: `bottom 150%`,
+          end: "top 50%",
+          scrub: true,
+          markers: true,
+        },
+      });
+    },
+    { scope: container }
+  );
+
   return (
     <UsesWrapper>
-      <Stack>
+      <Stack ref={container}>
         <Card>
           <Title>
             One Clingr,
             <br /> many options
           </Title>
         </Card>
-        <Card>
+        <Card className="card-1">
           <Mask style={{ transform: "rotate(-20deg)" }}>
             <Image
               src={image1}
@@ -43,7 +83,7 @@ function UsesSection() {
             </p>
           </Content>
         </Card>
-        <Card>
+        <Card className="card-2">
           <Mask style={{ transform: "rotate(0deg)" }}>
             <Image src={image2} alt="Clingr" />
           </Mask>
@@ -57,7 +97,7 @@ function UsesSection() {
             </p>
           </Content>
         </Card>
-        <Card>
+        <Card className="card-3">
           <Mask style={{ transform: "rotate(20deg)" }}>
             <Image
               src={image3}
